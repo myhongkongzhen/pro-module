@@ -21,7 +21,7 @@
 			<dependency>
 				<groupId>z.z.w</groupId>
 				<artifactId>pro-common</artifactId>
-				<version>2015082710-SNAPSHOT</version>
+				<version>2015083110-SNAPSHOT</version>
 			</dependency>
 
 			<!-- DB -->
