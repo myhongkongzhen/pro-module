@@ -152,4 +152,9 @@
 	<!-- </snapshotRepository> -->
 	<!-- </distributionManagement> -->
 
+	<modules>
+		<module>../pro-common</module>
+		<module>../pro-nsq-test</module>
+	</modules>
+
 </project>
