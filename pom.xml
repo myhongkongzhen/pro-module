@@ -28,7 +28,7 @@
 			<dependency>
 				<groupId>z.z.w</groupId>
 				<artifactId>dependency-db</artifactId>
-				<version>2015082412-SNAPSHOT</version>
+				<version>201508319-SNAPSHOT</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -37,7 +37,7 @@
 			<dependency>
 				<groupId>z.z.w</groupId>
 				<artifactId>dependency-spring</artifactId>
-				<version>2015082412-SNAPSHOT</version>
+				<version>201508319-SNAPSHOT</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -46,7 +46,7 @@
 			<dependency>
 				<groupId>z.z.w</groupId>
 				<artifactId>dependency-common</artifactId>
-				<version>2015082514-SNAPSHOT</version>
+				<version>201508319-SNAPSHOT</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
