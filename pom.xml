@@ -156,6 +156,7 @@
 		<module>../pro-common</module>
 		<module>../pro-nsq-test</module>
 		<module>../nsq-java</module>
+		<module>../pro-base-test</module>
 	</modules>
 
 </project>
