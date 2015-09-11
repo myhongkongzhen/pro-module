@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
@@ -33,7 +34,7 @@
 					</resource>
 				</resources>
 			</build>
-			<!-- 默认激活环境 -->
+			<!-- 默认�?��环境 -->
 			<activation>
 				<activeByDefault>true</activeByDefault>
 			</activation>
@@ -81,7 +82,7 @@
 	<dependencyManagement>
 		<dependencies>
 
-			<!-- 工具包 -->
+			<!-- 工具�? -->
 			<dependency>
 				<groupId>z.z.w</groupId>
 				<artifactId>pro-common</artifactId>
@@ -121,6 +122,7 @@
 	<build>
 		<pluginManagement>
 			<plugins>
+
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-source-plugin</artifactId>
@@ -262,6 +264,7 @@
 		<module>../nsq-java</module>
 		<module>../pro-base-test</module>
 		<module>../pro-mybatis-test</module>
+		<module>../pro-springmvc-mybatis-test</module>
 	</modules>
 
 </project>
