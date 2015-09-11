@@ -51,11 +51,14 @@
 					<resource>
 						<directory>src/main/resources</directory>
 						<targetPath>${project.build.directory}/${project.build.finalName}/conf</targetPath>
+						<excludes>
+							<exclude>META-INF/**/*.*</exclude>
+						</excludes>
 						<filtering>true</filtering>
 					</resource>
 
 					<resource>
-						<directory>src/main/java</directory>
+						<directory>src/main/resources</directory>
 						<includes>
 							<include>META-INF/**/*.*</include>
 						</includes>
