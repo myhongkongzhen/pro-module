@@ -25,6 +25,7 @@
 			<id>dev</id>
 			<properties>
 				<logback.target>target</logback.target>
+				<logback.console><![CDATA[<appender-ref ref="console" />]]></logback.console>
 			</properties>
 			<build>
 				<resources>
@@ -44,6 +45,7 @@
 			<id>master</id>
 			<properties>
 				<logback.target>..</logback.target>
+				<logback.console> </logback.console>
 			</properties>
 
 			<build>
