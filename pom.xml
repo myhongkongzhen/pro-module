@@ -45,7 +45,8 @@
 			<id>master</id>
 			<properties>
 				<logback.target>..</logback.target>
-				<logback.console> </logback.console>
+				<logback.console>
+				</logback.console>
 			</properties>
 
 			<build>
@@ -82,6 +83,27 @@
 				</plugins>
 			</build>
 		</profile>
+
+		<profile>
+			<id>dev-web</id>
+			<properties>
+				<logback.target>../..</logback.target>
+				<logback.console> </logback.console>
+			</properties>
+			<build>
+				<resources>
+					<resource>
+						<directory>src/main/resources</directory>
+						<filtering>true</filtering>
+					</resource>
+				</resources>
+			</build>
+			<!-- 默认�?��环境 -->
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+
 	</profiles>
 
 	<dependencyManagement>
