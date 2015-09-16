@@ -45,8 +45,7 @@
 			<id>master</id>
 			<properties>
 				<logback.target>..</logback.target>
-				<logback.console>
-				</logback.console>
+				<logback.console> </logback.console>
 			</properties>
 
 			<build>
@@ -98,10 +97,6 @@
 					</resource>
 				</resources>
 			</build>
-			<!-- 默认�?��环境 -->
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
 		</profile>
 
 	</profiles>
