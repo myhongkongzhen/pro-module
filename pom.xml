@@ -25,6 +25,7 @@
 			<id>dev</id>
 			<properties>
 				<logback.target>target</logback.target>
+				<logback.printsql>debug</logback.printsql>
 				<logback.console><![CDATA[<appender-ref ref="console" />]]></logback.console>
 			</properties>
 			<build>
@@ -45,7 +46,8 @@
 			<id>master</id>
 			<properties>
 				<logback.target>..</logback.target>
-				<logback.console> </logback.console>
+				<logback.printsql>info</logback.printsql>
+				<logback.console></logback.console>
 			</properties>
 
 			<build>
@@ -87,7 +89,8 @@
 			<id>dev-web</id>
 			<properties>
 				<logback.target>../..</logback.target>
-				<logback.console> </logback.console>
+				<logback.printsql>info</logback.printsql>
+				<logback.console></logback.console>
 			</properties>
 			<build>
 				<resources>
