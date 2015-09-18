@@ -14,9 +14,28 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.main.runner>z.z.w.test.MainRunner</project.main.runner>
-		<project.jvm.arguments>-server -Xms4096M -Xmx4096M
-			-XX:-UseGCOverheadLimit -verbose:gc -XX:+PrintGCDetails
-			-XX:+HeapDumpOnOutOfMemoryError</project.jvm.arguments>
+		<project.jvm.arguments>
+			-server
+			-Xms4g -Xmx4g -Xmn3g -Xss256k
+			-server
+			-XX:PermSize=64M
+			-XX:MaxPermSize=64M
+			-XX:+UseConcMarkSweepGC
+			-XX:+UseAdaptiveSizePolicy
+			-XX:+CMSClassUnloadingEnabled
+			-XX:+UseCMSCompactAtFullCollection
+			-XX:+DisableExplicitGC
+			-XX:CMSFullGCsBeforeCompaction=10
+			-XX:CMSMaxAbortablePrecleanTime=5
+			-XX:+HeapDumpOnOutOfMemoryError
+
+			<!-- -Xms4096M -Xmx4096M -->
+			<!-- -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+DisableExplicitGC -->
+			<!-- -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:ParallelGCThreads=8 -->
+			<!-- -XX:NewSize=128m -XX:MaxNewSize=256m -Xss128k -->
+			<!-- -XX:PermSize=64m -XX:MaxPermSize=128m -->
+			<!-- -XX:SurvivorRatio=14 -XX:TargetSurvivorRatio=90 -XX:MaxTenuringThreshold=16 -->
+		</project.jvm.arguments>
 	</properties>
 
 	<profiles>
@@ -197,7 +216,7 @@
 						<programs>
 							<program>
 								<mainClass>${project.main.runner}</mainClass>
-								<name>rProject</name>
+								<name>start_server</name>
 							</program>
 						</programs>
 					</configuration>
