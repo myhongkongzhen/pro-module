@@ -15,19 +15,45 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.main.runner>z.z.w.test.MainRunner</project.main.runner>
 		<project.jvm.arguments>
+
 			-server
-			-Xms4g -Xmx4g -Xmn3g -Xss256k
-			-server
-			-XX:PermSize=64M
-			-XX:MaxPermSize=64M
-			-XX:+UseConcMarkSweepGC
-			-XX:+UseAdaptiveSizePolicy
-			-XX:+CMSClassUnloadingEnabled
-			-XX:+UseCMSCompactAtFullCollection
+			-Xmx3000M
+			-Xms3000M
+			-Xmn600M
+			-Xss256K
+			-XX:+UseParNewGC
+			-XX:PermSize=500M
+			-XX:+PrintHeapAtGC
+			-XX:SurvivorRatio=1
+			-XX:+PrintGCDetails 
+			-XX:MaxPermSize=500M
 			-XX:+DisableExplicitGC
-			-XX:CMSFullGCsBeforeCompaction=10
-			-XX:CMSMaxAbortablePrecleanTime=5
-			-XX:+HeapDumpOnOutOfMemoryError
+			-XX:+PrintGCTimeStamps
+			-XX:+UseConcMarkSweepGC 
+			-XX:+PrintClassHistogram
+			-XX:+UseFastAccessorMethods
+			-XX:+CMSClassUnloadingEnabled 
+			-XX:LargePageSizeInBytes=128M
+			-XX:+CMSParallelRemarkEnabled
+			-XX:SoftRefLRUPolicyMSPerMB=0 
+			-XX:CMSFullGCsBeforeCompaction=0
+			-XX:+UseCMSCompactAtFullCollection
+			-XX:+UseCMSInitiatingOccupancyOnly 
+			-XX:CMSInitiatingOccupancyFraction=70
+			-Xloggc:"$BASEDIR"/logs/gc.log
+
+			<!-- -server -->
+			<!-- -Xms4g -Xmx4g -Xmn3g -Xss256k -->
+			<!-- -XX:PermSize=64M -->
+			<!-- -XX:MaxPermSize=64M -->
+			<!-- -XX:+UseConcMarkSweepGC -->
+			<!-- -XX:+UseAdaptiveSizePolicy -->
+			<!-- -XX:+CMSClassUnloadingEnabled -->
+			<!-- -XX:+UseCMSCompactAtFullCollection -->
+			<!-- -XX:+DisableExplicitGC -->
+			<!-- -XX:CMSFullGCsBeforeCompaction=10 -->
+			<!-- -XX:CMSMaxAbortablePrecleanTime=5 -->
+			<!-- -XX:+HeapDumpOnOutOfMemoryError -->
 
 			<!-- -Xms4096M -Xmx4096M -->
 			<!-- -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+DisableExplicitGC -->
@@ -35,6 +61,7 @@
 			<!-- -XX:NewSize=128m -XX:MaxNewSize=256m -Xss128k -->
 			<!-- -XX:PermSize=64m -XX:MaxPermSize=128m -->
 			<!-- -XX:SurvivorRatio=14 -XX:TargetSurvivorRatio=90 -XX:MaxTenuringThreshold=16 -->
+
 		</project.jvm.arguments>
 	</properties>
 
