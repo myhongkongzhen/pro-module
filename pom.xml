@@ -17,10 +17,10 @@
 		<project.jvm.arguments>
 
 			-server
+			-Xss256K
 			-Xmx3000M
 			-Xms3000M
-			-Xmn600M
-			-Xss256K
+			-Xmn1500M
 			-XX:+UseParNewGC
 			-XX:PermSize=500M
 			-XX:+PrintHeapAtGC
@@ -31,14 +31,16 @@
 			-XX:+PrintGCTimeStamps
 			-XX:+UseConcMarkSweepGC 
 			-XX:+PrintClassHistogram
+			-XX:MaxTenuringThreshold=8
 			-XX:+UseFastAccessorMethods
-			-XX:+CMSClassUnloadingEnabled 
-			-XX:LargePageSizeInBytes=128M
-			-XX:+CMSParallelRemarkEnabled
 			-XX:SoftRefLRUPolicyMSPerMB=0 
+			-XX:+CMSClassUnloadingEnabled 
+			-XX:+CMSParallelRemarkEnabled
+			-XX:LargePageSizeInBytes=128M
 			-XX:CMSFullGCsBeforeCompaction=0
-			-XX:+UseCMSCompactAtFullCollection
 			-XX:+UseCMSInitiatingOccupancyOnly 
+			-XX:+UseCMSCompactAtFullCollection
+			-XX:PretenureSizeThreshold=10000000
 			-XX:CMSInitiatingOccupancyFraction=70
 			-Xloggc:"$BASEDIR"/logs/gc.log
 
