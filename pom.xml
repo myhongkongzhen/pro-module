@@ -25,24 +25,25 @@
 			-XX:PermSize=500M
 			-XX:+PrintHeapAtGC
 			-XX:SurvivorRatio=1
-			-XX:+PrintGCDetails 
+			-XX:+PrintGCDetails
 			-XX:MaxPermSize=500M
 			-XX:+DisableExplicitGC
 			-XX:+PrintGCTimeStamps
-			-XX:+UseConcMarkSweepGC 
+			-XX:+UseConcMarkSweepGC
 			-XX:+PrintClassHistogram
-			-XX:MaxTenuringThreshold=8
 			-XX:+UseFastAccessorMethods
-			-XX:SoftRefLRUPolicyMSPerMB=0 
-			-XX:+CMSClassUnloadingEnabled 
+			-XX:SoftRefLRUPolicyMSPerMB=0
+			-XX:+CMSClassUnloadingEnabled
 			-XX:+CMSParallelRemarkEnabled
 			-XX:LargePageSizeInBytes=128M
 			-XX:CMSFullGCsBeforeCompaction=0
-			-XX:+UseCMSInitiatingOccupancyOnly 
+			-XX:+UseCMSInitiatingOccupancyOnly
 			-XX:+UseCMSCompactAtFullCollection
 			-XX:PretenureSizeThreshold=10000000
 			-XX:CMSInitiatingOccupancyFraction=70
 			-Xloggc:"$BASEDIR"/logs/gc.log
+
+			<!-- -XX:MaxTenuringThreshold=8 去掉該配置 -->
 
 			<!-- -server -->
 			<!-- -Xms4g -Xmx4g -Xmn3g -Xss256k -->
