@@ -94,7 +94,7 @@
 		<profile>
 			<id>master</id>
 			<properties>
-				<logback.target>..</logback.target>
+				<logback.target>/home/wuzz/${project.build.finalName}</logback.target>
 				<logback.printsql>info</logback.printsql>
 				<logback.console></logback.console>
 			</properties>
