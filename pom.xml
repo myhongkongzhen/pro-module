@@ -381,6 +381,7 @@
         <module>../pro-springmvc-mybatis-test</module>
         <module>../pro-elasticsearch</module>
         <module>../pro-test-module-two</module>
+        <module>../pro-study-jdk</module>
     </modules>
 
 </project>
