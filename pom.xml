@@ -374,13 +374,13 @@
 
     <modules>
         <module>../pro-common</module>
-        <module>../pro-nsq-test</module>
-        <module>../nsq-java</module>
-        <module>../pro-base-test</module>
+        <!-- <module>../pro-nsq-test</module>-->
+        <!--  <module>../nsq-java</module>-->
+        <!--   <module>../pro-base-test</module>-->
         <module>../pro-mybatis-test</module>
         <module>../pro-springmvc-mybatis-test</module>
-        <module>../pro-elasticsearch</module>
-        <module>../pro-test-module-two</module>
+        <!--   <module>../pro-elasticsearch</module>-->
+        <!--   <module>../pro-test-module-two</module>-->
         <!--<module>../pro-study-jdk</module>-->
     </modules>
 
